@@ -57,6 +57,26 @@
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names='server,queue,vite'"
+        ],
+        "pint": [
+            "@php ./vendor/bin/pint"
+        ],
+        "stan": [
+            "@php ./vendor/bin/phpstan analyse"
+        ],
+        "pest": [
+            "@php ./vendor/bin/pest --parallel"
+        ],
+        "pest:single": [
+            "@php ./vendor/bin/pest --parallel --filter"
+        ],
+        "pest:coverage": [
+            "@php ./vendor/bin/pest --coverage"
+        ],
+        "clean": [
+            "@php ./vendor/bin/pint",
+            "@php ./vendor/bin/phpstan analyse",
+            "@php ./vendor/bin/pest"
         ]
     },
     "extra": {
