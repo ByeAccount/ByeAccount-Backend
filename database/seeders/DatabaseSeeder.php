@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Enum\RoleEnum;
 use App\Models\User;
+use App\Models\Website;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
@@ -17,7 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(RoleSeeder::class);
-        $this->call(CategorySeeder::class);
 
         if (App::environment('local')) {
             $adminRole = Role::firstWhere('name', RoleEnum::ADMIN->value);
@@ -29,6 +29,9 @@ class DatabaseSeeder extends Seeder
                     'password' => Hash::make('password'),
                 ])
                 ->assignRole($adminRole);
+
+            Website::factory(20)
+                ->create();
         }
     }
 }

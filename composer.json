@@ -68,7 +68,7 @@
             "@php ./vendor/bin/pest --parallel"
         ],
         "pest:single": [
-            "@php ./vendor/bin/pest --parallel --filter"
+            "@php ./vendor/bin/pest --filter"
         ],
         "pest:coverage": [
             "@php ./vendor/bin/pest --coverage"

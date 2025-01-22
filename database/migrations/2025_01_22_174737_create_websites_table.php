@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('website_url', 255);
             $table->string('deletion_url', 255);
 
-            $table->foreignId('category_id')->constrained();
-
             $table->timestamps();
         });
     }
