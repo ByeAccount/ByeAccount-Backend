@@ -20,14 +20,14 @@ class RoleSeeder extends Seeder
             ]);
         }
 
-//        $permission1 = Permission::create([
-//            'name' => 'test.*',
-//        ]);
-//        $permission2 = Permission::create([
-//            'name' => 'test.*',
-//        ]);
-//
-//        Role::firstWhere('name', RoleEnum::ADMIN->value)
-//            ->givePermissionTo($permission1, $permission2);
+        //        $permission1 = Permission::create([
+        //            'name' => 'test.*',
+        //        ]);
+        //        $permission2 = Permission::create([
+        //            'name' => 'test.*',
+        //        ]);
+        //
+        //        Role::firstWhere('name', RoleEnum::ADMIN->value)
+        //            ->givePermissionTo($permission1, $permission2);
     }
 }

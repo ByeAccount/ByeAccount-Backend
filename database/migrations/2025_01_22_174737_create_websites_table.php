@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('websites', function (Blueprint $table) {
             $table->id();
             $table->string('name', 60);
-            $table->string('logo_url', 255);
+            $table->string('logo_url', 255)->nullable();
             $table->string('website_url', 255);
             $table->string('deletion_url', 255);
 

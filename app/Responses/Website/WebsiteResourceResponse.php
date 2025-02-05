@@ -6,7 +6,6 @@ use App\Http\Resources\Website\WebsiteResource;
 use App\Models\Website;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Resources\Json\JsonResource;
 
 readonly class WebsiteResourceResponse implements Responsable
 {
@@ -16,7 +15,7 @@ readonly class WebsiteResourceResponse implements Responsable
     ) {}
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toResponse($request): JsonResponse
     {

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Website;
+
 use function Pest\Laravel\getJson;
 
 beforeEach(function () {

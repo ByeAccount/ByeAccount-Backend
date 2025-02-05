@@ -17,8 +17,6 @@ class Step extends Model
 
     /**
      * Get the website that owns the step.
-     *
-     * @return BelongsTo
      */
     public function website(): BelongsTo
     {

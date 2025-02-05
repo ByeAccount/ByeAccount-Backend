@@ -16,7 +16,7 @@ readonly class WebsiteCollectionResponse implements Responsable
     ) {}
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function toResponse($request): JsonResponse
     {

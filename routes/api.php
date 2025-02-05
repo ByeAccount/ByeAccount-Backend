@@ -3,9 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-//Route::get('/user', function (Request $request) {
+// Route::get('/user', function (Request $request) {
 //    return $request->user();
-//})->middleware('auth:sanctum');
+// })->middleware('auth:sanctum');
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,6 @@ Route::prefix('websites')
         Route::get('/{id}', \App\Http\Controllers\Website\ShowController::class)->whereNumber('id')->name('show');
         Route::get('/', \App\Http\Controllers\Website\IndexController::class)->name('index');
         Route::put('/{website}', \App\Http\Controllers\Website\IndexController::class)->name('update');
-        Route::post('/{website}', \App\Http\Controllers\Website\IndexController::class)->name('store');
+        Route::post('/', \App\Http\Controllers\Website\StoreController::class)->name('store');
         Route::delete('/{website}', \App\Http\Controllers\Website\IndexController::class)->name('delete');
     });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Website;
 
+use App\Http\Resources\Step\StepResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -20,6 +21,7 @@ class WebsiteResource extends JsonResource
             'logo_url' => $this->logo_url,
             'website_url' => $this->website_url,
             'deletion_url' => $this->deletion_url,
+            'steps' => StepResource::collection($this->steps),
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
         ];

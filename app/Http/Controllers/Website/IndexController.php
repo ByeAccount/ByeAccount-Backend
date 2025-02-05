@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Website\WebsiteFilterRequest;
-use App\Http\Resources\Website\WebsiteCollection;
 use App\Models\Website;
 use App\Responses\Website\WebsiteCollectionResponse;
 
