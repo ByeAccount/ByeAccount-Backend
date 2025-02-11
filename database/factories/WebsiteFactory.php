@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Website;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,10 +18,21 @@ class WebsiteFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name,
-            'logo_url' => $this->faker->url,
+            'name' => $this->faker->company(),
+            'logo_url' => "https://picsum.photos/200/200",
             'website_url' => $this->faker->url,
             'deletion_url' => $this->faker->url,
         ];
+    }
+
+    public function configure()
+    {
+        return $this->afterCreating(function (Website $website) {
+            $website->steps()->createMany([
+                ['order' => 1, 'text' => fake()->sentence],
+                ['order' => 2, 'text' => fake()->sentence],
+                ['order' => 3, 'text' => fake()->sentence],
+            ]);
+        });
     }
 }
