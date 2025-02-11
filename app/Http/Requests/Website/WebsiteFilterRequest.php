@@ -22,7 +22,7 @@ class WebsiteFilterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['nullable', 'string', 'min:3', 'max:60'],
+            'name' => ['nullable', 'string', 'max:60'],
         ];
     }
 }
